@@ -1,0 +1,9 @@
+{
+  "name": "smig",
+  "owner": {"name": "smig"},
+  "plugins": [
+    {"name": "smig-base", "source": "./plugins/smig-base", "version": "0.2.0"},
+    {"name": "talend", "source": "./plugins/talend", "version": "0.0.1"},
+    {"name": "databricks-pyspark", "source": "./plugins/databricks-pyspark", "version": "0.1.0"}
+  ]
+}

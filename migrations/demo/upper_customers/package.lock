@@ -1,0 +1,26 @@
+{
+  "files": {
+    ".claude-plugin/plugin.json": "c3c8f4d40d72bb2a01a8d65b01fe831dae4ab14fee370943b7e61228793769c7",
+    "agents/migration.md": "ec4ec635bc489ee268e28f193e983d26dce96950d6eb134f60a71a66dbb1127f",
+    "skills/migration-loop/SKILL.md": "e4fcbf19e4e130d4bd94587eae617869734d02b625a896738bc45c78e92a8210",
+    "smig.yaml": "a4481c2ab6a0a254a1b9700442882e1e8f2267cf7fe49c0370cd62f7750c9903"
+  },
+  "layers": {
+    "base": {
+      "content_sha256": "7cae6f986df83794d673632cc7386486bcbb6f7674d02da616bacd5a32b6dde4",
+      "name": "smig-base",
+      "version": "0.2.0"
+    },
+    "source": {
+      "content_sha256": "18382ecd1754d84639737b2397d56f1a97a0250289dda684eb10cec62846f957",
+      "name": "talend",
+      "version": "0.0.1"
+    },
+    "target": {
+      "content_sha256": "d76071168c65b0b2911e819298237b51c94ed89d8b91ab818b1abf841030de13",
+      "name": "databricks-pyspark",
+      "version": "0.1.0"
+    }
+  },
+  "version": 2
+}

@@ -1,0 +1,10 @@
+kind: source
+runtime_dependencies: []
+entry_points:
+  inventory: smig.demo.source_plugin:inventory
+  extract: smig.demo.source_plugin:extract
+capabilities:
+  execute_controlled: true
+  local_engine: false
+  component_eval: false
+  deterministic_translator: false

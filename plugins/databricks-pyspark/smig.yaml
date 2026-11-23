@@ -1,0 +1,8 @@
+kind: target
+runtime_dependencies: []
+entry_points:
+  compare: smig.targets.databricks_pyspark.entry:compare
+  mutators: smig.targets.databricks_pyspark.entry:mutators
+  render: smig.targets.databricks_pyspark.entry:render
+  execute: smig.targets.databricks_pyspark.entry:execute
+capabilities: {}

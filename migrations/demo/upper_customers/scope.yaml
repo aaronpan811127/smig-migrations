@@ -1,0 +1,55 @@
+schema_version: 2
+scope_id: upper_customers
+project: demo
+source:
+  plugin: talend
+  objects:
+  - kind: job
+    name: UppercaseCustomers
+    version: '0.1'
+    path: process/UppercaseCustomers_0.1.item
+    sha256: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  depends_on_scopes: []
+target:
+  profile: databricks_pyspark
+  options: {}
+conversion:
+  mode: deterministic
+  unsupported: block
+validation:
+  tier: A
+  strategies:
+  - id: S1
+    runner: fake
+    fixture_sets:
+      visible:
+      - fx_basic
+      holdout:
+      - hx_edge
+  overrides_budget: 5
+  literal_allowlist: []
+comparison:
+- output: customers_out
+  keys:
+  - id
+adequacy:
+  negative_controls:
+  - drop_column
+  - row_drop
+  - row_duplicate
+  - null_injection
+  - perturb_value
+  - type_change
+  min_kill_rate: 1.0
+budgets:
+  max_iterations: 10
+  max_wall_clock: 4h
+  max_cost_usd: 50
+  no_progress_limit: 3
+  max_attempts: 2
+deliverables:
+- outputs/demo/upper_customers/**
+approval:
+  approved_by: tester
+  approved_at: '2026-11-13T00:00:00Z'
+  spec_hash: 2a2bc1d5ad2b0294ce91438ef141092b339402a6b0e0d4f8c86d8d4d3777a898

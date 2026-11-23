@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile job="UppercaseCustomers" version="0.1">
+  <node component="tFileInputDelimited" file="customers.csv" columns="id,name,country"/>
+  <node component="tMap" expression="name=StringHandling.UPCASE(name)" filter="country"/>
+  <node component="tFileOutputDelimited" file="customers_out.csv" columns="id,name,country"/>
+</talendfile>
